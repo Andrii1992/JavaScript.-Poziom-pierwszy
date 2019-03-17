@@ -1,0 +1,1 @@
+alert("CO CO!! Ty w kokoszniku?");
