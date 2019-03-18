@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">                           
+                                  
+
+<html>
+  <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+ </head>
+ <body> 
+ <script type="text/javascript" >
+
+//************Konversja*******************************
+
+var liczba1 = 5;
+var liczba2 = 5.1;
+var liczba3 = "52";
+var liczba4 = true;
+var liczba5 = false;
+
+//alert("Konwersja Liczby1 " + parseInt(liczba1) + " " + liczba1);
+//alert("Konwersja Liczby2 " + parseInt(liczba2) + " " + liczba2);
+//alert("Konwersja Liczby3 " + parseInt(liczba3) + " " + liczba3);
+//alert("Konwersja Liczby4 " + parseInt(liczba4) + " " + liczba4);
+//alert("Konwersja Liczby5 " + parseInt(liczba5) + " " + liczba5);
+
+
+
+document.body.innerHTML+="******************<b>Konvwrsja parseInt</b>*********"+"<br />";
+document.body.innerHTML+="Konwersja Liczby1 : " + parseInt(liczba1) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vartosci - " + liczba1;
+document.body.innerHTML+="<br />" + "Konwersja Liczby2 : " + parseInt(liczba2) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vartosci - " + liczba2;
+document.body.innerHTML+="<br />" + "Konwersja Liczby3 : " + parseInt(liczba3) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vartosci - " + liczba3;
+document.body.innerHTML+="<br />" + "Konwersja Liczby4 : " + parseInt(liczba4) + "&nbsp;&nbsp; Vartosci - " + liczba4;
+document.body.innerHTML+="<br />" + "Konwersja Liczby5 : " + parseInt(liczba5) + "&nbsp;&nbsp; Vartosci - " + liczba5;
+document.body.innerHTML+="<br />"; 
+
+document.body.innerHTML+="<br />" + "******************<b>Konvwrsja parseFloat</b>********";
+document.body.innerHTML+="<br />" + "Konwersja Liczby1 : " + parseFloat(liczba1) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vartosci - " + liczba1;
+document.body.innerHTML+="<br />" + "Konwersja Liczby2 : " + parseFloat(liczba2) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vartosci - " + liczba2;
+document.body.innerHTML+="<br />" + "Konwersja Liczby3 : " + parseFloat(liczba3) + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vartosci - " + liczba3;
+document.body.innerHTML+="<br />" + "Konwersja Liczby4 : " + parseFloat(liczba4) + "&nbsp;&nbsp; Vartosci - " + liczba4;
+document.body.innerHTML+="<br />" + "Konwersja Liczby5 : " + parseFloat(liczba5) + "&nbsp;&nbsp; Vartosci - " + liczba5;
+document.body.innerHTML+="<br />"; 
+
+
+document.body.innerHTML+="<br />" + "******************<b>Konvwrsja .toString()</b>********";
+document.body.innerHTML+="<br />" + "Konwersja Liczby1 : " + liczba1.toString() + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vartosci - " + liczba1;
+document.body.innerHTML+="<br />" + "Konwersja Liczby2 : " + liczba2.toString() + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vartosci - " + liczba2;
+document.body.innerHTML+="<br />" + "Konwersja Liczby3 : " + liczba3.toString() + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vartosci - " + liczba3;
+document.body.innerHTML+="<br />" + "Konwersja Liczby4 : " + liczba4.toString() + "&nbsp;&nbsp; Vartosci - " + liczba4;
+document.body.innerHTML+="<br />" + "Konwersja Liczby5 : " + liczba5.toString() + "&nbsp;&nbsp; Vartosci - " + liczba5;
+document.body.innerHTML+="<br />"; 
+
+
+//Nie istnieje konversacji do typu logicznego ale mozna rzytowac i false wyda dla zera lub ciogow pustych
+document.body.innerHTML+="<br />";
+document.body.innerHTML+=Boolean(0)  + " ";
+document.body.innerHTML+=Boolean("") + " ";
+document.body.innerHTML+=Boolean(1);
+
+//Mozna takze zutowac do typu numerycznego wtedy wartosci logiczne 
+//beda zerem lub jedynka
+document.body.innerHTML+="<br />";
+document.body.innerHTML+=Number(true)  + " ";
+document.body.innerHTML+=Number(false) + " ";
+
+document.body.innerHTML+=String(false);
+
+
+
+
+
+ </script> 
+ </body>
+</html>
