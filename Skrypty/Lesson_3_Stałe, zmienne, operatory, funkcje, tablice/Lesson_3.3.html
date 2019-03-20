@@ -1,0 +1,117 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">                           
+                                  
+
+<html>
+  <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+ </head>
+ <body> 
+ <script type="text/javascript" > 
+ function wy(text)
+ {
+     var wys =document.body;
+     wys.innerHTML += text + "<br />";	 
+ }
+ 
+ //Jeszcze jest inna metoda wyswietlania to document.write() ale jest to metoda przestarzala
+ //nagacja taka sama ja c# czyli if(!(1<a){}
+
+ //var ze="111";
+ //var s="111";
+ //var tr = (s=="11") ? 1: -1; //instrukcja warynkowa
+ //wy(tr);
+ //var ss= "123456;
+ //wy(ss);
+ 
+ //do{}while(s="111")
+ //while(true){}
+ // for(i=1;i<10;i++){wy("<b><i>" + i + "</i></b>");}
+ // var i=1;
+ // for(;i<10;i++){wy("<b><i>" + i + "</i></b>");}
+ // for(;i<25;){wy("<b><i>" + i + "</i></b>"); i++;}
+ // for(;;)
+ //   {
+ // 	if(!(i<5))
+ //	      break;
+ //   if(i == 3) {i++; continue;}
+
+ //	 wy("<b><i>" + i + "</i></b>"); i++;
+ //	  }
+  
+ //  var tab = new Array("element 1","element 2","element 3","element 4");
+ //  for(var z in tab){wy(tab[z]);}
+ //for(var z in history){wy(history[z]);}
+  
+//  var z="11151561265161561";
+// switch (z)
+// {
+//     case "111": 
+//	         wy(z); 
+//	         break;
+	 
+//	 case "22":
+//        	 wy(z); 
+//	         break;
+	 
+//	 default : 
+//	         wy(z); 
+ 
+// }
+ 
+
+ 
+ // if(ze===s)
+ //  alert("ten Sam Typ i rowne");
+ // else
+ // alert("Nie ten Sam Typ lu nie sa rowne!!");
+ // if(typeof(ze)==typeof(s))  //zgodnosc po typach
+ //  alert("Ten sam typ");
+ // else
+ //  alert("Nie ten Sam Typ!");
+ 
+ // operato === wymaga conajmniej jednej niezgodnosci po wartosci lub typie
+ 
+//---------------Funkcje-i-Funkcje wewnetrzne---------------------------------
+/*
+function sum(el1,el2,el3)
+{
+   //el1=typeof(el1) != "undefined" ? el1 : 0;
+   //el2=typeof(el2) != "undefined" ? el2 : 0;
+   //el3=typeof(el3) != "undefined" ? el3 : 0;   
+  wy(el1+el2+el3);
+}
+
+function sum(el1,el2,el3)
+{
+   //el1=typeof(el1) != "undefined" ? el1 : 0;
+   //el2=typeof(el2) != "undefined" ? el2 : 0;
+   //el3=typeof(el3) != "undefined" ? el3 : 0; 
+   function con(arg){return typeof(arg)=="undefined" ? 0:arg}   
+  wy(con(el1)+con(el2)+con(el3));
+}
+
+function su(el1,el2,el3)
+{
+  return(el1+el2+el3);
+}
+
+sum(1,2,"trrr"); //w tym przypadku sumuje jak liczby a potem dodaje string
+sum("trrr",1,2); //a w tym sumuje jako stringi wszystko 
+sum("trrr",1,2,3); //Jak podac wiecej argumentow to zignoruje
+sum(); //Takze dozwolone pomijanie argumentow ale od PRAWEJ STRONY!! 
+//сczyli nie wolno zrobic to sum(,1,2);
+//wy(su(1,2,3)+" return");// return takze moze nic nie zwracac
+//slowo return sluzy do wychodzenia z function
+//Funkcja pracuje na kopiach dannych!!!
+*/
+//--------------------------------------------------------------------------
+
+open("https://poczta.wp.pl");
+
+
+
+ </script>
+ </body> 
+</html>
