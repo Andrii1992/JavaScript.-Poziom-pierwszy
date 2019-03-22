@@ -1,0 +1,123 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">                           
+                                  
+
+<html>
+  <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+ </head>
+ <body> 
+ <script type="text/javascript" > 
+ function wy(text)
+ {
+     var wys =document.body;
+     wys.innerHTML += text + "<br />";	 
+ }
+
+
+//Konwersja z binarnrgo do dziesietnego 
+function bitToInt(licz)
+{
+ var dlLicz = licz.length;
+ var bit;
+ var wykladnik = 0;
+ var liczba = 0;
+ for (i=dlLicz-1;i>=0;i--)
+ {
+   bit=parseInt(licz.charAt(i));
+   liczba += Math.pow(2,wykladnik++)*bit;
+ }
+ return liczba;
+}
+
+/*
+function intToBit(li)
+{
+ var bin="";
+ var temp;
+  for (;;)
+  {
+    temp=(li%2);
+	bin+=temp.toString();	
+	if(li<2){ break;}
+	li = parseInt(li/2);
+  }  
+  return bin;
+}
+
+
+
+*/
+
+function ileBit(licz)
+{
+ var wykladnik = 0;
+ var potenga;
+ for(;;)
+ {
+   potega = Math.pow(2,wykladnik++);
+   if((licz/potega)<1) return wykladnik-1;
+ }
+}
+
+function intToBit(li)
+{
+ var dl=ileBit(li);
+ var potega;
+ var bin="";
+ for (i = dl-1;i>=0;i--)
+ {
+  potega = Math.pow(2,i);
+  if((li/potega) >= 1)
+  {
+   li -=potega;
+   bin +="1";
+  }
+  else
+  {
+   bin +="0";
+  }
+ } 
+ return bin;
+}
+
+//wy(intToBit(5));
+
+function dodajZera(licz,miej)
+{
+  var dl=licz.length;
+  var zera="";
+  for(i = dl; i<miej;i++)
+  {
+     zera+="0";
+  }
+  return zera+licz;
+}
+/*
+ var p=0;
+ while(p<10)
+ {  
+    wy(p + " : " + dodajZera(intToBit(p).toString(),6));
+    p++;	 
+ }
+ wy("-----------------------------------------------------")
+ 
+ for(r=0;r<=10;r++){
+  wy( r + " : " + dodajZera(intToBit(i).toString(),10));
+}
+*/
+
+ //var dz=(10|3);
+ //var dz=(10&3);
+ //var dz=(10^3);
+ //var dz=(10);
+ //dz=dz<<2
+ var dz=-10;
+ dz= ~(dz);
+ //dz=dz>>>1
+  wy( dz + " : " + dodajZera(intToBit(dz).toString(),5));
+
+ </script>
+ </body> 
+</html>
