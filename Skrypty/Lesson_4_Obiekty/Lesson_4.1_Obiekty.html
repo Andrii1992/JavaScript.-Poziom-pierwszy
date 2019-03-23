@@ -1,0 +1,170 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">                           
+                                  
+
+<html>
+  <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+ </head>
+ <body> 
+ <script type="text/javascript" > 
+ function wy(text)
+ {
+     var wys =document.body;
+     wys.innerHTML += text + "<br />";	 
+ }
+/* 
+var osoba = {
+          "imie" : "Jan",
+		  "nazwisko" : "Kowalski"
+}
+
+osoba.wiek=30;      //mozemy rowniez dodawac nowe pola 
+osoba.imie="Konan"; //jak i ich modyfikowac
+var tam = "kotImie"; //mozna przekazywac dane za pomoca zminnej
+osoba[tam]="Levis";
+
+
+
+wy(osoba);
+wy(osoba.imie);
+wy(osoba.nazwisko);
+wy(osoba.wiek);
+wy(osoba.kotImie);
+
+for (var x in osoba)
+{
+ wy(" X : " + osoba[x]);
+}
+
+wy(osoba["imie"]); //za pomoca nazw mozna odwolywac sie do wartosci obiektu
+
+var pp={} //mozna dynamicznie twozyc obiekt po kolei dodawac pola
+
+pp.t=tab.slice(0);
+pp.y=1;
+pp.x=10;
+
+
+pp.fu1= function()
+ {
+    wy(this.x + " : Function");	 
+ }
+
+var tab = new Array("123","3");
+var pp={
+y : 10,
+x : 20, 
+w1 : function(text)
+ {
+     
+     var wys =document.body;
+     wys.innerHTML += text + "<br />";	 
+ }
+}                 
+ 
+wy(pp);
+
+for (var x in pp)
+{
+ wy(" X : " + pp[x]);
+}
+
+pp.w1("Ha ha ha");
+
+
+
+var punkt = new Object(); // Object() jest function wiec mozemy napisac cos podobnego
+punkt.x = 10;
+punkt.y = 20; 
+
+wy(punkt.x + " : x i y : " + punkt.y);
+
+
+
+function Punkt1() //te same nazwy function ale z ruznymi argumentami nie whodza
+{
+  this.x=10;
+  this.y=20;
+}
+
+function Punkt(x,y)
+{
+  this.x=x;
+  this.y=y;
+  this.wys = function() //  nie jest idealnym rozwiazaniem bo ta metoda nie jest wspolna dla wszystkich obiektow (w c# statyczna)
+  {
+    var doc = document.body;
+	doc.innerHTML += "( " + this.x + " , " + this.y + " )" + "<br />";
+  }
+}
+var punkt = new Punkt(23,78);
+//var punkt1 = new Punkt1();
+//wy(punkt.x + " : x i y : " + punkt.y);
+//wy(punkt1.x + " : x1 i y1 : " + punkt1.y);
+//punkt.wys();
+*/
+
+function Punkt(x,y)
+{
+  this.x=x;
+  this.y=y;
+}
+Punkt.prototype.wlWsp = 140;
+Punkt.prototype.wlWspZm = function(zm){Punkt.prototype.wlWsp = zm;}
+
+Punkt.prototype.wys = function() //to jakby metoda statyczna w c# czyli jest dla kazdego obiektu
+  {
+    var doc = document.body;
+	doc.innerHTML += "( " + this.x + " , " + this.y + " ) " + this.wlWsp + "<br />";
+  }
+
+
+
+var punkt1 = new Punkt(23,7);
+var punkt2 = new Punkt(55,58);
+var punkt3 = new Punkt(36,56);
+punkt1.wys();
+punkt2.wys();
+punkt3.wys();
+wy(" ");
+
+Punkt.prototype.wlWsp = 0;
+punkt1.wys();
+punkt2.wys();
+punkt3.wys();
+wy(" ");
+
+punkt1.wlWspZm(455);
+
+punkt1.wys();
+punkt2.wys();
+punkt3.wys();
+
+//**-----Function jak obiekt--------------
+
+function ge( a,b )
+{
+  return a + b;
+} 
+
+var e = ge; // funkcje mozna przypisywac do obiektow
+
+wy(e(154,211) + " - e(154,211)");
+
+function wywolanie(funkcja // funkcje mozna przekazywac jako argument
+{
+  for(var i = 1; i < 5; i++)
+  {
+    wy(funkcja(2,19*i) + " : " + i);
+  }
+} 
+
+wywolanie(ge);
+
+
+
+ </script>
+ </body> 
+</html>
