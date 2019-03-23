@@ -1,0 +1,73 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">                           
+                                  
+
+<html>
+  <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+ </head>
+ <body> 
+ <!--
+ <h1>Jakis badglowek 1</h1>
+ <h2>Jakis badglowek 2 </h2> 
+ 
+ <div style ="width: 300px; height: 300px; background-color: green; padding: 20px;">
+ <p>Green trujkont</p>
+ <div style ="width: 50px; height: 50px; background-color: black; padding: 10px;"></div> 
+ </div>
+ -->
+ 
+ <script type="text/javascript" > 
+ function wy(text)
+ {
+     var wys =document.body;
+     wys.innerHTML += text + "<br />";	 
+ }
+
+//teraz robimy to samo w javascript dynamicznie
+stronaBo = document.body;
+
+
+tagH1 = document.createElement('h1');
+zawartoscTagu =document.createTextNode("Jakis badglowek 1");
+tagH1.appendChild(zawartoscTagu);
+stronaBo.appendChild(tagH1);
+
+tagH2 = document.createElement('h2');
+zawartoscTagu2 =document.createTextNode("Jakis badglowek 2");
+tagH2.appendChild(zawartoscTagu2);
+stronaBo.appendChild(tagH2);
+
+
+tagDiv1 = document.createElement('div');
+tagDiv1.setAttribute('style','width: 300px; height: 300px; background-color: green; padding: 20px;');
+stronaBo.appendChild(tagDiv1);
+
+
+
+tagP = document.createElement('p');
+zawartoscTaguP = document.createTextNode('Zoren');
+tagP.appendChild(zawartoscTaguP);
+tagDiv1.appendChild(tagP);
+
+
+tagDiv2 = document.createElement('div');
+tagDiv2.setAttribute('style','width: 50px; height: 50px; background-color: yellow; padding: 10px;');
+tagDiv1.appendChild(tagDiv2);
+
+tagDiv3 = document.createElement('div');
+tagDiv3.setAttribute('style','width: 100px; height: 50px; background-color: gray; padding: 10px;');
+tagDiv1.appendChild(tagDiv3);
+
+//wy("--------------------------------");
+ </script>
+<button onclick = "stronaBo.removeChild(tagH1);">tagH1</button>
+ <button onclick = "stronaBo.removeChild(tagH2);">tagH2</button>
+  <button onclick = "tagDiv1.removeChild(tagP);">tagP</button>
+   <button onclick = "stronaBo.removeChild(tagDiv1);">tagDiv1</button>
+    <button onclick = "tagDiv1.removeChild(tagDiv2);">tagDiv2</button>
+	<button onclick = "tagDiv1.removeChild(tagDiv3)">tagDiv3</button>
+
+ </body> 
+</html>

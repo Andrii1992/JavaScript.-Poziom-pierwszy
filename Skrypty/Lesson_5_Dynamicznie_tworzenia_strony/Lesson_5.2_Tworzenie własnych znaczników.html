@@ -1,0 +1,102 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">                           
+                                  
+
+<html>
+  <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+ <script type="text/javascript" >
+ function tag123() 
+{
+ var z = 1;
+
+     
+
+  var tagm = document.getElementsByTagName("prostokont");
+  var liczbaTagow = tagm.length;
+  var diveElem;
+  var tabZawaTag = new Array();
+  
+  for(i = 0; i<liczbaTagow; i++)
+  {
+   tabZawaTag[i] = tagm[i].innerHTML;
+   tagm[i].innerHTML = "";
+  }
+    
+   for(i = 0; i<liczbaTagow; i++)
+   {
+     diveElem = document.createElement('div');
+	 tagm[i].appendChild(diveElem);
+	 
+	 diveElem.style.backgroundColor = tagm[i].getAttribute("kolor");
+	 diveElem.style.width = tagm[i].getAttribute("szerokosc");
+	 diveElem.style.height = tagm[i].getAttribute("wysokosc");
+	 diveElem.style.color = tagm[i].getAttribute("tkolor");
+		
+	 diveElem.style.textAlign = "center";
+	 diveElem.innerHTML = tabZawaTag[i];
+   }
+     
+
+
+} 
+ </script>
+ </head>
+ <body> 
+ <!--
+ <h1>Jakis badglowek 1</h1>
+ <h2>Jakis badglowek 2 </h2> 
+ 
+ <div style ="width: 300px; height: 300px; background-color: green; padding: 20px;">
+ <p>Green trujkont</p>
+ <div style ="width: 50px; height: 50px; background-color: black; padding: 10px;"></div> 
+ </div>
+ -->
+ 
+ <script type="text/javascript" > 
+ 
+ 
+ function wy(text)
+ {
+     var wys =document.body;
+     wys.innerHTML += text + "<br />";	 
+ }
+  
+ </script>
+ <body onload = "tag123()">
+ <prostokont szerokosc = "1265px" wysokosc ="250px" kolor = "#050055" tkolor = "#fffff0">
+<font size="7"><i><b>Wykaz kolorów - Kolory HTML</b></i></font><br /><br />
+<font size="6">
+black	#000000	  <br />
+silver	#C0C0C0	  <br />
+gray	#808080	  <br />
+white	#FFFFFF	  <br />
+
+</font></prostokont>
+ <prostokont szerokosc = "1265px" wysokosc ="200px" kolor = "#ff0655" tkolor = "#ffff00">
+<font size="6">
+maroon	#800000	  <br /> 
+red     #FF0000   <br /> 
+purple	#800080	  <br />
+fuchsia	#FF00FF	  <br />
+green	#008000	  <br />
+
+</font></prostokont> 
+  <prostokont szerokosc = "1265px" wysokosc ="300px" kolor = "#00FF00" tkolor = "#008080">
+<font size="6">
+lime	#00FF00	  <br />
+olive	#808000	  <br />
+yellow	#FFFF00	  <br />
+navy	#000080	  <br />
+blue	#0000FF	  <br />
+teal	#008080	  <br />
+aqua	#00FFFF   <br />
+
+</font></prostokont> 
+  <prostokont szerokosc = "1265px" wysokosc ="100px" kolor = "#FFFF00" tkolor = "#ffff00"></prostokont>
+
+
+ </body> 
+</html>
