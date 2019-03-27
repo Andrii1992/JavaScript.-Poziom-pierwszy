@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">                           
+                                  
+
+<html>
+  <head>
+  </head>
+ <body> 
+  <script type="text/javascript" > 
+	function wy(text)
+	{
+     var wys =document.body;
+     wys.innerHTML += text + "<br />";	 
+	}
+	/* 
+	for(var z in window){if(window[z] == null || window[z] == false ){continue;}wy(window[z] + " ");}
+
+	if(confirm("Czy tak")){ alert("Tak"); } //confirm() wyswietla pytanie i zwraca bool
+	else { alert("Nie"); }
+	
+
+	var z = prompt("Pofaj","Tutaj"); //wyswietla pasek i pobiera wprowadzxone wartosci
+	wy("<h1>" + z + "</h1>");
+	wy("<p>"+ z +"</p>");
+	*/
+	
+	wy("Wysokosc okna : " + innerWidth);
+	wy("Wewnetrsrzna wysokosc okna : " + innerHeight);
+	
+	wy("Zewnetrzna szerokosc okna : " + outerWidth);
+	wy("Zewnetrzna wysokosc okna : " + outerHeight);
+	wy("Pasek adresu : " + locationbar.visible);
+	wy("Pasek menu : " + menubar.visible);
+	wy("Pasek ustawien osobistych : " + personalbar.visible);
+	wy("Paski przewijania : " + scrollbars.visible);
+	wy("Pasek narzedziowy : " + locationbar.visible);
+	
+  </script>
+ <p onmousedown = "alert('coco?')">Jak?</p>
+ <button onclick = "open('https://wp.pl','','')">open</button> <!-- otwozy strone w nowym oknie -->
+ <button onclick = "open('https://terrikon.com/','_self','')">open2</button> <!-- otwozy strone w tym samym oknie -->
+ <button onclick = "ok=open('https://terrikon.com/','_blank','left=20, top=20, width=300, height=200, menubar=no, location=no, personalbar=no, status=no, scroll=no')">open3</button>
+ <p onmousedown = "ok.close()">Zamknij</p> <!-- zamyka open3 -->
+ </body> 
+</html>
